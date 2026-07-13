@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import Image from "next/image";
 import HeaderLinks from "./HeaderLinks";
 import GreenButton from "./GreenButton";
