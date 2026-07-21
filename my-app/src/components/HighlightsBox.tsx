@@ -1,21 +1,21 @@
 import { LucideIcon } from "lucide-react";
-import Image from "next/image";
 
 interface HighlightsProps {
-    tittle: string;
-    text: string;
-    icon: LucideIcon;
+  tittle: string;
+  text: string;
+  icon: LucideIcon;
+  className?: string;
 }
 
-export default function Highlights({ tittle, text, icon: Icon }: HighlightsProps){
+export default function Highlights({ tittle, text, icon: Icon, className }: HighlightsProps){
     return(
-        <div className="flex flex-col md:flex-row">
+        <div className={`flex items-center gap-8 md:gap-3 ${className ?? ""}`}>
             <div>
-                <Icon className="w-8 h-8 text-white"/>
+                <Icon className="w-12 h-12 text-(--green-t)"/>
             </div>
             <div>
-                <h1>{tittle}</h1>
-                <h3>{text}</h3>
+                <h1 className="text-xl text-white font-bold">{tittle}</h1>
+                <h3 className="text-xs font-medium text-(--texts)">{text}</h3>
             </div>
         </div>
     )
